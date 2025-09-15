@@ -1,0 +1,35 @@
+server:
+  port: 9000
+
+spring:
+  application:
+    name: auth-service
+  datasource:
+    url: jdbc:postgresql://localhost:5432/authdb
+    username: authuser
+    password: authpass
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+security:
+  jwt:
+    # Base64-encoded 256-bit key (example only, change in prod)
+    secret: c29tZS1sb25nLXNlY3JldC1rZXktMzItYnl0ZXMtcGxlYXNlLXVwZGF0ZQ==
+    expiration-seconds: 3600
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+
+
