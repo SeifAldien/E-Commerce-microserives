@@ -26,7 +26,6 @@ A simple, didactic e-commerce platform showing a polyglot microservices setup:
 - [API Usage](#api-usage)
 - [Configuration](#configuration)
 - [Troubleshooting](#troubleshooting)
-- [License](#license)
 
 ## Architecture
 
